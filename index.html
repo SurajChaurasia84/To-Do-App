@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="shortcut icon" href="./src/fvn.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+            <i id="themeIcon" class="fas fa-sun"></i>
+        </button>
+        <h2>Advanced To-Do App</h2>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Enter a task" />
+            <button onclick="addTask()"><i class="fas fa-plus"></i></button>
+        </div>
+
+        <div class="filters">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('completed')">Completed</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <button class="clear-btn" onclick="showModal()">Clear All</button>
+    </div>
+
+    <div class="modal" id="confirmModal">
+        <div class="modal-content">
+            <h3>Are you sure you want to clear all tasks?</h3>
+            <button onclick="clearAllTasks()">Yes</button>
+            <button onclick="hideModal()">Cancel</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
