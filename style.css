@@ -47,7 +47,6 @@ body {
 @media (max-width: 768px) {
     .container {
         width: 100vw;
-        height: 100vh;
         margin: 0;
         border-radius: 0;
         border: none;
